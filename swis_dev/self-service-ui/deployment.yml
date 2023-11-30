@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: go-self-service-ui-deployment
-        image: pmamueng/go-self-service-ui:0.0.3
+        image: pmamueng/go-self-service-ui:0.0.5
         resources:
           requests:
             cpu: "100m"
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 4455
+        - containerPort: 4485

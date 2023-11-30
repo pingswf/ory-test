@@ -14,9 +14,9 @@ kratos:
         base_url: http://localhost:4434/
 
     selfservice:
-      default_browser_return_url: http://localhost:4455/
+      default_browser_return_url: http://localhost:4485/
       allowed_return_urls:
-        - http://localhost:4455
+        - http://localhost:4485
         - http://localhost:4444
 
       methods:
@@ -30,43 +30,43 @@ kratos:
 
       flows:
         error:
-          ui_url: http://localhost:4455/error
+          ui_url: http://localhost:4485/error
 
         settings:
-          ui_url: http://localhost:4455/settings
+          ui_url: http://localhost:4485/settings
           privileged_session_max_age: 15m
 
         recovery:
           enabled: true
-          ui_url: http://localhost:4455/recovery
+          ui_url: http://localhost:4485/recovery
           after:
             hooks:
               - hook: revoke_active_sessions
 
         verification:
           enabled: true
-          ui_url: http://localhost:4455/verification
+          ui_url: http://localhost:4485/verification
           after:
-            default_browser_return_url: http://localhost:4455/
+            default_browser_return_url: http://localhost:4485/
 
         logout:
           after:
-            default_browser_return_url: http://localhost:4455/logout
+            default_browser_return_url: http://localhost:4485/logout
 
         login:
           lifespan: 10m
-          ui_url: http://localhost:4455/login
+          ui_url: http://localhost:4485/login
           after:
-            default_browser_return_url: "http://localhost:4455/dashboard"
+            default_browser_return_url: "http://localhost:4485/dashboard"
             password:
               hooks:
                 - hook: require_verified_address
 
         registration:
           lifespan: 10m
-          ui_url: http://localhost:4455/registration
+          ui_url: http://localhost:4485/registration
           after:
-            default_browser_return_url: http://localhost:4455/registered
+            default_browser_return_url: http://localhost:4485/registered
 
     log:
       level: debug

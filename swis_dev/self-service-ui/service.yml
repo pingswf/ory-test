@@ -8,7 +8,7 @@ spec:
     app: go-self-service-ui
   ports:
    # Port Map
-    - port: 4455
-      targetPort: 4455
+    - port: 4485
+      targetPort: 4485
       protocol: TCP
   type: ClusterIP

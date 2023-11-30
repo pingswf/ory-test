@@ -14,10 +14,10 @@ hydra:
           salt: youReallyNeedToChangeThis
 
     urls:
-      login: http://localhost:4455/login
-      consent: http://localhost:4455/auth/consent
-      logout: http://localhost:4455/logout
-      error: http://localhost:4455/error
+      login: http://localhost:4485/login
+      consent: http://localhost:4485/auth/consent
+      logout: http://localhost:4485/logout
+      error: http://localhost:4485/error
       self:
         public: http://localhost:4444/
         issuer: http://localhost:4444/
