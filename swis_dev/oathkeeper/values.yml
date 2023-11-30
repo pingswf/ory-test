@@ -8,7 +8,7 @@ oathkeeper:
     
     access_rules:
       repositories:
-        - "https://raw.githubusercontent.com/pingswf/ory-test/main/local_cluster/oathkeeper/rules.json"
+        - "https://raw.githubusercontent.com/pingswf/ory-test/main/swis_dev/oathkeeper/rules.json"
     
     errors:
       fallback:
@@ -38,7 +38,7 @@ oathkeeper:
         enabled: true
         config:
           issuer_url: http://localhost:4455/
-          jwks_url: "https://raw.githubusercontent.com/pingswf/ory-test/main/local_cluster/oathkeeper/jwks.json"
+          jwks_url: "https://raw.githubusercontent.com/pingswf/ory-test/main/swis_dev/oathkeeper/jwks.json"
     
     authorizers:
       allow:
