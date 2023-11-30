@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mailslurper
+spec:
+  selector:
+   # Selector for Pods
+    app: mailslurper
+  ports:
+   # Port Map
+    - name: http4436
+      port: 4436
+      targetPort: 4436
+      protocol: TCP
+    - name: http4437
+      port: 4437
+      targetPort: 4437
+      protocol: TCP
+    - name: http1025
+      port: 1025
+      targetPort: 1025
+      protocol: TCP
+  type: ClusterIP

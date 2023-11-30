@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-self-serivce-ui-deployment
+  labels:
+    app: go-self-service-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-self-service-ui
+  template:
+    metadata:
+      labels:
+        app: go-self-service-ui
+    spec:
+      containers:
+      - name: go-self-service-ui-deployment
+        image: pmamueng/go-self-service-ui:0.0.3
+        resources:
+          requests:
+            cpu: "100m"
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 4455
